@@ -10,5 +10,13 @@ function writePassword() {
 
 }
 
+function generatePassword() {
+// set out all the available characters:
+var uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+var lowercase = 'abcdefghijklmnopqrstuvwxyz'
+var specialCharacters = '!"#$%&()*+,-./:;<>=?@[\]^_`{}~|'
+var numbers = '1234567890'
+}
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
