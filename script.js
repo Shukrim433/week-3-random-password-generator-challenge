@@ -26,11 +26,13 @@ var numbersPref = confirm('Do you want numbers letters in your password?')
 var specialCharactersPref = confirm('Do you want special characters in your password?')
 
 
+
+
+
 //preference for password length
 var passwordLength = prompt('How many characters do you want your password to be?');
 passwordLength= parseInt(passwordLength);
-
-if (isNaN(passwordLength)) {
+  if (isNaN(passwordLength)) {
  window.alert('Invalid! You need to enter a number.');
 } else if (passwordLength < 8) {
  window.alert('Your password should be over 8 characters.');
@@ -39,6 +41,7 @@ if (isNaN(passwordLength)) {
 } else {
  window.alert('Password length is valid!');
 }
+
 
 //an array of all the characters that can be used in the password
 
@@ -57,25 +60,17 @@ if(specialCharactersPref){
   passwordCharacters = passwordCharacters.concat(specialCharacters.split(''))
 }
 
+//create random password
+var password = ''
 
-
-
-
-/*var passwordLength = prompt('How many charachters do you want your password to be?')
-
-//if password length entered is not a number.
-if (typeof passwordLength !== 'number'){
-  window.alert('Invalid! You need to enter a number.')
-} else if(passwordLength < 8){
-  window.alert('Your password should be over 8 characters')
-} else if (passwordLength > 128){
-  window.alert('your password should be less than 128 characters')
-}*/
-
+for (var i = 0 ; i < passwordLength ; i++){
+  var randomCharacterIndex = Math.floor(Math.random()*passwordCharacters.length)
+  password += passwordCharacters[randomCharacterIndex]
 }
 
+return password
 
-
+}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
