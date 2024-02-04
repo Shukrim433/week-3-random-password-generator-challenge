@@ -40,6 +40,23 @@ if (isNaN(passwordLength)) {
  window.alert('Password length is valid!');
 }
 
+//a string of all the characters that can be used in the password
+
+var passwordCharacters = ''
+
+if(lowerCasePref){
+  passwordCharacters +=lowercase
+}
+if(uppercasePref){
+  passwordCharacters +=uppercase
+}
+if(numbersPref){
+  passwordCharacters +=numbers
+}
+if(specialCharactersPref){
+  passwordCharacters +=specialCharacters
+}
+
 
 
 
