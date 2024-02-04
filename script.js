@@ -28,8 +28,9 @@ var specialCharactersPref = confirm('Do you want special characters in your pass
 
 //preference for password length
 var passwordLength = prompt('How many characters do you want your password to be?');
+passwordLength= parseInt(passwordLength);
 
-if (typeof passwordLength !== 'number') {
+if (isNaN(passwordLength)) {
  window.alert('Invalid! You need to enter a number.');
 } else if (passwordLength < 8) {
  window.alert('Your password should be over 8 characters.');
@@ -38,6 +39,8 @@ if (typeof passwordLength !== 'number') {
 } else {
  window.alert('Password length is valid!');
 }
+
+
 
 
 
