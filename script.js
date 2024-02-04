@@ -40,25 +40,22 @@ if (isNaN(passwordLength)) {
  window.alert('Password length is valid!');
 }
 
-//a string of all the characters that can be used in the password
+//an array of all the characters that can be used in the password
 
-var passwordCharacters = ''
+var passwordCharacters = []
 
 if(lowerCasePref){
-  passwordCharacters +=lowercase
+  passwordCharacters = passwordCharacters.concat(lowercase.split(''))
 }
 if(uppercasePref){
-  passwordCharacters +=uppercase
+  passwordCharacters = passwordCharacters.concat(uppercase.split(''))
 }
 if(numbersPref){
-  passwordCharacters +=numbers
+  passwordCharacters = passwordCharacters.concat(numbers.split(''))
 }
 if(specialCharactersPref){
-  passwordCharacters +=specialCharacters
+  passwordCharacters = passwordCharacters.concat(specialCharacters.split(''))
 }
-
-
-
 
 
 
