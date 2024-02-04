@@ -23,12 +23,59 @@ var numbers = '1234567890'
 var lowerCasePref = confirm('Do you want lowercase letters in your password?')
 var uppercasePref = confirm('Do you want uppercase letters in your password?')
 var numbersPref = confirm('Do you want numbers letters in your password?')
-var specialCharactersPref = confirm('Do you want uppercase letters in your password?')
+var specialCharactersPref = confirm('Do you want special characters in your password?')
+
 
 //preference for password length
+var passwordLength = prompt('How many characters do you want your password to be?');
 
+if (typeof passwordLength !== 'number') {
+ window.alert('Invalid! You need to enter a number.');
+} else if (passwordLength < 8) {
+ window.alert('Your password should be over 8 characters.');
+} else if (passwordLength > 128) {
+ window.alert('Your password should be less than 128 characters.');
+} else {
+ window.alert('Password length is valid!');
+}
+
+
+
+
+
+
+/*var passwordLength = prompt('How many charachters do you want your password to be?')
+
+//if password length entered is not a number.
+if (typeof passwordLength !== 'number'){
+  window.alert('Invalid! You need to enter a number.')
+} else if(passwordLength < 8){
+  window.alert('Your password should be over 8 characters')
+} else if (passwordLength > 128){
+  window.alert('your password should be less than 128 characters')
+}*/
 
 }
 
+
+
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
+
+
+
+
+
+
+
+
+
+/*
+//if they dont enter anything
+else if (!passwordLength){
+  window.alert('Invalid! You need to enter a number.')
+}
+*/
