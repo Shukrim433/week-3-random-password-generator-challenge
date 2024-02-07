@@ -27,13 +27,14 @@ So no matter what the user enters they will get an alert telling them that they 
 
 -Finally i used a for loop. In that for loop I used the functions ' Math.floor(Math.random()*passwordCharacters.length)' which essentially picks a random number from 0 to 1 and multiplies that by the 'passwordCharacters' length and then rounds in down to the nearest integer, to give me a random index (character) of the 'passwordCharacter' array to add to the 'password' variable, to in turn, crate the random password.
 
-- 
 
 ## Webpage
 
-These are some screenshots of the deployed application:
+This is a screenshot of the deployed application:
 
 ![ screenshot of the webpage](./password%20generator.png)
 
 
 This is a link to the deployed webpage:
+https://shukrim433.github.io/week-3-random-password-generator-challenge/
+
