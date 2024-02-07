@@ -25,7 +25,11 @@ var uppercasePref = confirm('Do you want uppercase letters in your password?')
 var numbersPref = confirm('Do you want numbers letters in your password?')
 var specialCharactersPref = confirm('Do you want special characters in your password?')
 
+//make sure atleast 1 preference is selected
 
+if(!lowerCasePref && !uppercasePref && !numbersPref && !specialCharactersPref){
+  window.alert('You need to pick atleast one preference!')
+}
 
 
 
@@ -81,13 +85,3 @@ generateBtn.addEventListener("click", writePassword);
 
 
 
-
-
-
-
-/*
-//if they dont enter anything
-else if (!passwordLength){
-  window.alert('Invalid! You need to enter a number.')
-}
-*/
